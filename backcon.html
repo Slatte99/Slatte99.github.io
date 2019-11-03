@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/back.css">
+	<title>Стать исполнителем</title>
+</head>
+<body>
+<div class="form">
+	<h1>Добавьте данные о себе и своем творчестве</h1>
+	<input class="in1" type="text" name="name" placeholder="Введите имя" id="name">
+	<input class="in2" type="text" name="surname" placeholder="Введите фамилию" id="name">
+	<input class="in3" type="email" name="email" placeholder="Введите email" id="name">
+	<input class="in4" type="phone" name="phone" placeholder="Введите телефон" id="name">
+	<input class="in5 "type="message" name="message" placeholder="Введите название и автора трека" id="name">
+	<button id="but">Отправить</button>
+</div>
+</body>
+<script>
+	let a = [];
+	i=0;
+	names = document.querySelectorAll('#name');
+	function setInp(){
+		names.forEach(function(e){
+			e.addEventListener('keydown', function(met){
+			if(met.keyCode===13){
+				a[i] = this.value;
+				this.value = '';
+				i++;
+				console.log(a);
+			}
+		})
+	})
+	}
+	setInp();
+	j = 1;
+	document.getElementById('but').addEventListener('click', function(){
+		console.log('done');
+		let data = 'List№' + j;
+		localStorage.setItem(data, a);
+		j++
+	});
+</script>
+</html>

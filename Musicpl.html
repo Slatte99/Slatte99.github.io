@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <link href="styles/Main.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="bg">
+            <div id="blackLayer"></div>
+            <img src="ncs.jpg" class="back">
+        </div>
+       
+        <div id="main">
+            <div id="image">
+                <img src="ncs.jpg" class="imagesong">
+            </div>
+            <div id="player">
+                <div id="songTitle">Demo</div>
+                <div id="buttons">
+                    <button id="pre" onclick="pre()" ><img src="Pre.png" height="90%" width="90%" ></button>
+                    <button id="play"  onclick=" playOrPauseSong()" ><img src="Play.png" class="butplay"></button>
+                    <button id="next" onclick="next()"><img src="Next.png" height="90%" width="90%"/></button>
+                </div>
+                
+                <div id="seek-bar">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+               
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var songs = ["Culture Code - Fairytale (feat. Amanda Collis) [NCS Release].mp3", "MELO.KIDS x EMDI - My Love [NCS Release].mp3", "Modern Revolt - LOCA [NCS Release].mp3", "ROY KNOX - Earthquake [NCS Release].mp3", "Ship Wrek _ Zookeepers - Ark _NCS Release_.mp3"];
+        var poster = ["ncs.jpg", "ncs.jpg", "ncs.jpg", "ncs.jpg", "ncs.jpg"];
+        var song = new Audio();
+        var songNumber = 0;
+        var fill = document.getElementById('fill');
+        var songTitle = document.getElementById('songTitle');
+      
+
+        function playSong(){
+            song.src = songs[songNumber];
+            songTitle.textContent = songs[songNumber];
+            setTimeout(function(){
+                song.play();
+            },0);
+         }
+          function startSong(){
+            song.src = songs[songNumber];
+            songTitle.textContent = songs[songNumber];
+            setTimeout(function(){
+                song.pause();
+            },0);
+         }
+     window.onload = startSong(); 
+
+     function playOrPauseSong(){
+        if (song.paused) {
+            song.play();
+            document.querySelector('.butplay').src = "Pause.png";
+        }
+        else{
+            song.pause();
+            document.querySelector('.butplay').src = "Play.png";
+        }
+     }  
+     song.addEventListener('timeupdate', function(){
+        var position = song.currentTime / song.duration;
+        fill.style.width = position*100 + '%';
+     })
+     function next(){
+        songNumber++;
+        if (songNumber>2) {
+            songNumber = 0;
+        }
+        playSong();
+        document.querySelector('.butplay').src = "Pause.png";
+        document.querySelector('.back').src = poster[songNumber];
+        document.querySelector('.imagesong').src = poster[songNumber];
+     }
+      function pre(){
+        songNumber--;
+        if (songNumber<0) {
+            songNumber = 2;
+        }
+        playSong();
+        document.querySelector('.butplay').src = "Pause.png";
+        document.querySelector('.back').src = poster[songNumber];
+        document.querySelector('.imagesong').src = poster[songNumber];
+     }
+    </script>   
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
