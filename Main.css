@@ -1,0 +1,161 @@
+*{
+    transition: all 0.2s ease-in-out;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Acme', sans-serif;
+}
+#bg{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+#bg img{
+    height: 120vh;
+    width: 105%;
+    filter:blur(20px);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 50%;
+    z-index: 1;
+}
+#blackLayer{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    z-index: 99;
+}
+#main{
+    width: 338px;
+    background-color:#fff;
+    border-radius: 15px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+       margin: -169px 0px 0px -169px;
+    z-index: 999;
+}   
+#image img{
+    height: 180px;
+    width: 100%;
+    margin-top: -5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#player{
+    padding: 25px;
+    color:#333;
+    padding: 20px;
+}
+#songTitle{
+    margin-top: 20px;
+    width:300px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    position: absolute;
+    top:56%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#buttons{
+    height: 50px;
+    width: 100%;
+    margin-top: 60px;
+    position:relative;
+    top:10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#play,#next,#pre{
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background-image: linear-gradient(to right top, #000000, #111111, #1b1b1b, #252525, #303030);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+#next{
+    width: 30px;
+    height: 30px;
+    left: 70%;
+}
+#pre{
+    width: 30px;
+    height: 30px;
+    left: 30%;
+}
+#play img,#next img,#pre img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transition: all  1s ease-in-out;
+    transform: translate(-50%,-50%);
+}
+#seek-bar{
+    width: 250px;
+    height: 5px;
+    background-color:gray;
+    display: flex;
+    border-radius: 50px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+#fill{
+    height: 5px;
+    background-image: linear-gradient(to right top, #000000, #111111, #1b1b1b, #252525, #303030);
+    border-radius: 20px;
+}
+#handle{
+    width: 8px;
+    height: 8px;
+    background-image: linear-gradient(to right top, #000000, #111111, #1b1b1b, #252525, #303030);
+    border-radius: 50%;
+    margin-left: -5px;
+    margin-top: -1px;
+    transform: scale(2);
+}
+#play:hover {
+ background-image: linear-gradient(to right top, #000000, #111111, #1b1b1b, #252525, #303030);
+    transition: all  1s ease-in-out;
+} 
+#next:hover {
+background-image: linear-gradient(to right top, #000000, #111111, #1b1b1b, #252525, #303030);
+  transition:  1s ease-in-out;
+    }
+#pre:hover {
+     
+ background-image: linear-gradient(to right top, #000000, #111111, #1b1b1b, #252525, #303030);
+transition:  1s ease-in-out;
+}
+.Time{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
