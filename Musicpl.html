@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link href="Main.css" rel="stylesheet"/>
     </head>
     <body>
@@ -30,6 +31,7 @@
     </body>
     <script type="text/javascript">
         var songs = ["Culture Code - Fairytale (feat. Amanda Collis) [NCS Release].mp3", "MELO.KIDS x EMDI - My Love [NCS Release].mp3", "Modern Revolt - LOCA [NCS Release].mp3", "ROY KNOX - Earthquake [NCS Release].mp3", "Ship Wrek _ Zookeepers - Ark _NCS Release_.mp3"];
+        var songs1 = ["Culture Code - Fairytale (feat. Amanda Collis) [NCS Release]", "MELO.KIDS x EMDI - My Love [NCS Release]", "Modern Revolt - LOCA [NCS Release]", "ROY KNOX - Earthquake [NCS Release]", "Ship Wrek _ Zookeepers - Ark _NCS Release_"];
         var poster = ["ncs.jpg", "ncs.jpg", "ncs.jpg", "ncs.jpg", "ncs.jpg"];
         var song = new Audio();
         var songNumber = 0;
@@ -39,14 +41,14 @@
 
         function playSong(){
             song.src = songs[songNumber];
-            songTitle.textContent = songs[songNumber];
+            songTitle.textContent = songs1[songNumber];
             setTimeout(function(){
                 song.play();
             },0);
          }
           function startSong(){
             song.src = songs[songNumber];
-            songTitle.textContent = songs[songNumber];
+            songTitle.textContent = songs1[songNumber];
             setTimeout(function(){
                 song.pause();
             },0);

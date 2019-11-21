@@ -56,8 +56,10 @@ a:hover{
   flex-direction: row;
   width: 80%;
   margin: 0px auto;
+  padding-top: 50px;
+  padding-bottom: 10px;
   justify-content: center;
 }
 .b_1{
-  margin-right: 60px;
+  margin-right: 50px;
 }

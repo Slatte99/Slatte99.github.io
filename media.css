@@ -1,0 +1,35 @@
+@media screen and (max-width: 720px) {
+	body{
+		width: 95%;
+		margin: 0 auto;
+	}
+	.flex {
+    flex-direction: column!important;
+    height: auto;
+	}
+	img{
+		width: 95vw!important;
+	}
+	.text1{
+		width: 90%!important;
+   		color: #00FCFF!important;
+   		font-size: 3vw!important;
+	}
+	h1{
+		font-size: 7.5vw;
+		margin-bottom: 2vw;
+	}
+	.text1 p {
+    line-height: 5vw;
+	}
+
+	.flex1{
+		flex-direction: column!important;
+		justify-content: center;
+		align-items: center;
+	}
+	.b_1{
+		margin-right: 0;
+		margin-bottom: 50px;
+	}
+}
