@@ -1,0 +1,10 @@
+@media screen and (max-width: 720px) {
+	.back{
+		display: none;
+	}
+	#blackLayer{
+		background-image: linear-gradient(to right bottom, #000000, #090909, #111111, #171717, #1c1c1c);
+	}
+
+
+}
